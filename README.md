@@ -1,4 +1,3 @@
-
 # Ponderada de Pose Estimation - Samuel Lucas
 
 ## 1. Análise Exploratória do ANIMAL-POSE DATASET
@@ -40,11 +39,7 @@ Após o processamento, obtivemos os seguintes resultados:
 
    ![Gráfico de Proporção de Imagens](./imgs/pizza2.png)
 
-2. **Comparação de Imagens**: Um gráfico comparativo foi gerado para visualizar o total de imagens no arquivo `keypoints.json` em relação às imagens disponíveis após a filtragem.
-
-   ![Gráfico Comparativo de Imagens](caminho/para/seu/grafico_comparativo.png)
-
-3. **Quantidade de Imagens por Categoria**: Uma tabela foi criada para resumir a quantidade de imagens disponíveis por categoria de animal.
+2. **Quantidade de Imagens por Categoria**: Uma tabela foi criada para resumir a quantidade de imagens disponíveis por categoria de animal.
 
    | Animal  | Quantidade |
    |---------|------------|
@@ -69,3 +64,14 @@ Durante o desenvolvimento deste projeto, aprendi a utilizar bibliotecas como Med
 - **Explorar técnicas de aumento de dados** para melhorar a precisão.
 - **Transfer Learning** para aprimorar o desempenho do modelo com dados limitados.
 - **Desenvolver uma rede neural personalizada** que possa detectar poses em diversas espécies de animais.
+
+## Observações sobre a Filtragem de Dados
+
+Durante a análise exploratória do ANIMAL-POSE DATASET, a filtragem das imagens revelou desafios significativos. Embora o arquivo `keypoints.json` indicasse a presença de mais de **4000 imagens**, apenas **1000 imagens** estavam disponíveis após a filtragem, e somente **200 imagens** eram de bovinos. Isso levanta questões importantes sobre a representatividade do dataset e a qualidade das anotações.
+
+#### Considerações:
+- **Sub-representação de Bovinos:** A escassez de imagens de bovinos pode limitar a eficácia do modelo de detecção de pose, tornando essencial a coleta de mais dados específicos dessa categoria.
+- **Qualidade das Anotações:** É crucial garantir que as anotações no arquivo `keypoints.json` sejam precisas e abrangentes, uma vez que a qualidade dos dados impacta diretamente nos resultados do modelo.
+- **Impacto nas Conclusões:** A redução significativa no número de imagens disponíveis para análise pode afetar a generalização e a robustez das conclusões tiradas a partir deste estudo.
+
+Essas considerações sugerem que futuras iterações deste projeto deveriam focar na melhoria da coleta de dados e na revisão das anotações para aumentar a confiabilidade dos resultados obtidos.
